@@ -8,9 +8,12 @@ function onBallClick() {
 
     gOriginalSize.currWidth += 50
     gOriginalSize.currHeight += 50
+    if (gOriginalSize.currWidth > 400 || gOriginalSize.currHeight > 400) {
+        gOriginalSize.currWidth = 100
+        gOriginalSize.currHeight = 100
+    }
 
     elBall.innerText = gOriginalSize.currWidth
     elBall.style.width = gOriginalSize.currWidth + 'px'
     elBall.style.height = gOriginalSize.currHeight + 'px'
 }
-// to increment the ball’s width & height by 50px and
