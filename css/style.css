@@ -12,7 +12,7 @@ h1 {
     color: white;
 }
 
-div {
+.ball {
     background-color: dodgerblue;
     width: 100px;
     height: 100px;
@@ -20,6 +20,6 @@ div {
     margin: 100px auto;
     font-size: 22px;
     font-weight: bold;
-
+    transition: 1s;
 
 }
