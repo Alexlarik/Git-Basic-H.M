@@ -54,4 +54,18 @@ function reduceBall(ball) {
 function onFifthBallClick() {
     document.body.style.backgroundColor = getRandomColor()
 }
+function onSixthBallClick() {
+    resetGame()
+}
+function resetGame() {
+    const elBalls = document.querySelectorAll(".ball")
+    for (var i = 0; i < elBalls.length; i++) {
+        var ball = elBalls[i]
+        ball.innerText = 100
+        ball.style.width = '100px'
+        ball.style.height ='100px'
+    }
+    document.body.style.backgroundColor = 'black'
+
+}
 
