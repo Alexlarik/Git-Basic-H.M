@@ -3,8 +3,7 @@
 const gOriginalSize = { currWidth: 100, currHeight: 100 }
 //
 
-function onBallClick() {
-    const elBall = document.querySelector(".ball")
+function onBallClick(clickedBall) {
     const maxDiameter = 400
 
     gOriginalSize.currWidth += getRandomInt(20, 60)
@@ -13,9 +12,19 @@ function onBallClick() {
         gOriginalSize.currWidth = 100
         gOriginalSize.currHeight = 100
     }
-
-    elBall.innerText = gOriginalSize.currWidth
-    elBall.style.width = gOriginalSize.currWidth + 'px'
-    elBall.style.height = gOriginalSize.currHeight + 'px'
-    elBall.style.backgroundColor = getRandomColor()
+    clickedBall.innerText = gOriginalSize.currWidth
+    clickedBall.style.width = gOriginalSize.currWidth + 'px'
+    clickedBall.style.height = gOriginalSize.currHeight + 'px'
+    clickedBall.style.backgroundColor = getRandomColor()
 }
+
+function onThirdBallClick() {
+    const elBalls = document.querySelectorAll(".ball")
+
+    for (var i = 0; i < elBalls.length - 1; i++) {
+        const ball = elBalls[i]
+        onBallClick(ball)
+    }
+}
+
+
