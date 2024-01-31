@@ -51,3 +51,7 @@ function reduceBall(ball) {
 
 }
 
+function onFifthBallClick() {
+    document.body.style.backgroundColor = getRandomColor()
+}
+
