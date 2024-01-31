@@ -23,6 +23,11 @@ h1 {
     transition: 1s;
 
 }
-.ball2{
+
+.ball2 {
     background-color: lightseagreen;
+}
+
+.ball3 {
+    background-color: slateblue;
 }
